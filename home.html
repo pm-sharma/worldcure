@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href='https://cdn.lineicons.com/1.0.1/LineIcons.min.css' rel='stylesheet'>
+        <!-- for app icons in iOS -->
+    <link rel="apple-touch-icon" href="./icons/apple-icon.jpg">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.jpg">
+
+
+    <title>Home</title>
+    <style>
+        .login-input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid gainsboro;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .login-input:focus {
+            border: 1px solid blue;
+        }
+
+        button {
+            width: 80%;
+            margin-top: 40px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(42, 102, 42);
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            /* padding: 14px 16px; */
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+
+        .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 1500px;
+            /* Used in this example to enable scrolling */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="signup.html">
+            <img style="height:28px;width: auto;transform: rotate(-90deg);" src="https://raw.githubusercontent.com/pm-sharma/Women-Techies-Site/master/Assets/Arrow.png" />
+            &nbsp; &nbsp;&nbsp; &nbsp;Sign in to Commonwealth
+        </a>
+    </div>
+    <div class="container-fluid">
+        <div class="row" style="text-align: center;">
+            <div class="col-12" style="margin-top : 100px;">
+                <img style="height: 100px" src="logo.jpeg" />
+            </div>
+
+            <div class="col-12" id="error" style="padding : 20px; color : red; display: none; ">
+                User does not exist!
+            </div>
+            <div class="col-12">
+                <input type="text" id="email" class="login-input" placeholder="Client number">
+            </div>
+            <div class="col-12">
+                <input type="text" id="password" class="login-input" placeholder="Password">
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" id="login">Connect Securely</button>
+            </div>
+            <div style="margin-top: 20px" class="col-12">
+                Lost your client number?
+            </div>
+            <div style="margin-top: 20px" class="col-12">
+                    Or
+                </div>
+            <div style="margin-top: 20px"  class="col-12">
+                Forgot your password?
+            </div>
+        </div>
+
+		<div class="row"
+        style="position: fixed; bottom : 0; width : 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: white">
+        <div class="col-3" style="text-align: center; position: relative; padding : 20px;color: #4BA76F">
+            <a href="./timeline&map.html" style="text-decoration: none;color: #4BA76F">
+                <div style="height: 25px; margin : auto auto;color:#4BA76F">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24.30473624940828" width="26.430859105388663">
+                          <defs>
+                            <path id="path-1" opacity="1" fill-rule="evenodd" d="M26.25945568408556,11.87114994920303 L13.524190551614733,0.15674447103257838 C13.353978632333812,0 13.083988038684122,0 12.9137761194032,0.15674447103257838 L0.17851098693237216,11.87114994920303 C0.004128872603007323,12.03243001439736 0,12.297850206377039 0.16928889185866888,12.46398254063111 C0.33857778371733777,12.630114874885175 0.6171781806294734,12.634048416154664 0.7915602949588382,12.472768350960333 L13.219422482582498,1.039090226513346 L25.649919546021092,12.472768344831927 C25.76136391630697,12.58322468952676 25.92726856571018,12.626812348283476 26.082387641741956,12.586389463029974 C26.237506717773737,12.545966577776472 26.357026377336613,12.427999452708779 26.393942741362714,12.27888139668458 "/>
+                            <path id="path-2" opacity="1" fill-rule="evenodd" d="M22.88065810031839,12.59033077123786 C22.638123868673027,12.59033077123786 22.441511026784912,12.777642127639378 22.441511026784912,13.008702395458231 L22.441511026784912,23.46799300096755 L3.9973339383788877,23.46799300096755 L3.9973339383788877,13.008702395458231 C3.9973339383788877,12.777642127639378 3.800721096490772,12.59033077123786 3.558186864845411,12.59033077123786 C3.3156526332000498,12.59033077123786 3.119039791311934,12.777642127639378 3.119039791311934,13.008702395458231 L3.119039791311934,23.886364625187923 C3.119039791311934,24.117424893006778 3.3156526332000498,24.304736249408293 3.558186864845411,24.304736249408293 L22.88065810031839,24.304736249408293 C23.12319233196375,24.304736249408293 23.319805173851865,24.117424893006778 23.319805173851865,23.886364625187923 L23.319805173851865,13.008702395458231 "/>
+                            <path id="path-3" opacity="1" fill-rule="evenodd" d="M16.293451997316346,21.794506504085994 C16.53598622896171,21.794506504085994 16.732599070849822,21.60719514768447 16.732599070849822,21.37613487986562 L16.732599070849822,14.682188892339656 C16.732599070849822,14.451128624520802 16.53598622896171,14.263817268119283 16.293451997316346,14.263817268119283 L10.145392967847657,14.263817268119283 C9.902858736202296,14.263817268119283 9.70624589431418,14.451128624520802 9.70624589431418,14.682188892339656 L9.70624589431418,21.37613487986562 C9.70624589431418,21.60719514768447 9.902858736202296,21.794506504085994 10.145392967847657,21.794506504085994 C10.387927199493019,21.794506504085994 10.584540041381135,21.60719514768447 10.584540041381135,21.37613487986562 L10.584540041381135,15.100560516560028 L15.85430492378287,15.100560516560028 L15.85430492378287,21.37613487986562 "/>
+                          </defs>
+                          <g opacity="1">
+                            <g opacity="1">
+                              <use xlink:href="#path-1" fill="#4BA76F" fill-opacity="1"/>
+                            </g>
+                            <g opacity="1">
+                              <use xlink:href="#path-2" fill="#4BA76F" fill-opacity="1"/>
+                            </g>
+                            <g opacity="1">
+                              <use xlink:href="#path-3" fill="#4BA76F" fill-opacity="1"/>
+                            </g>
+                          </g>
+                        </svg>
+                </div>
+                <!-- <img src="./icons/Home.svg"
+                    style="height: 25px; margin : auto auto;color:#4BA76F"> -->
+            </a>
+        </div>
+        <div class="col-3" style="text-align: center;; padding : 20px">
+            <a href="./speakers&sponsors.html" style="text-decoration: none"><img src="./icons/Info.svg"
+                    style="height: 25px; margin: auto auto"></a>
+        </div>
+        <div class="col-3" style="text-align: center; padding : 20px">
+            <a href="./hunt.html" style="text-decoration: none"><img src="./icons/Hunt.svg"
+                    style="height: 25px; margin : auto auto"></a>
+        </div>
+        <div class="col-3" style="text-align: center; padding : 20px">
+            <a href="./profile&DSCteam.html" style="text-decoration: none"><img src="./icons/Profile.svg"
+                    style="height: 25px; margin : auto auto"></a>
+        </div>
+
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function () {
+                    console.log('Service Worker Registered');
+                });
+        }
+
+    </script>
+    <script src="./ios-popup.js"></script>
+
+</body>
+
+</html>
