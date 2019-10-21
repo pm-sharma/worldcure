@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href='https://cdn.lineicons.com/1.0.1/LineIcons.min.css' rel='stylesheet'>
+        <!-- for app icons in iOS -->
+    <link rel="apple-touch-icon" href="./icons/apple-icon.jpg">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.jpg">
+
+
+    <title>Home</title>
+    <style>
+        .login-input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid gainsboro;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .login-input:focus {
+            border: 1px solid blue;
+        }
+
+        button {
+            width: 80%;
+            margin-top: 40px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(42, 102, 42);
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            /* padding: 14px 16px; */
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+
+        .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 1500px;
+            /* Used in this example to enable scrolling */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="signup.html">
+            <img style="height:28px;width: auto;transform: rotate(-90deg);" src="https://raw.githubusercontent.com/pm-sharma/Women-Techies-Site/master/Assets/Arrow.png" />
+            &nbsp; &nbsp;&nbsp; &nbsp;Sign in to Commonwealth
+        </a>
+    </div>
+    <div class="container-fluid">
+        <div class="row" style="text-align: center;">
+            <div class="col-12" style="margin-top : 100px;">
+                <img style="height: 100px" src="logo.jpeg" />
+            </div>
+
+            <div class="col-12" id="error" style="padding : 20px; color : red; display: none; ">
+                User does not exist!
+            </div>
+            <div class="col-12">
+                <input type="text" id="email" class="login-input" placeholder="Client number">
+            </div>
+            <div class="col-12">
+                <input type="text" id="password" class="login-input" placeholder="Password">
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" id="login">Connect Securely</button>
+            </div>
+            <div style="margin-top: 20px" class="col-12">
+                Lost your client number?
+            </div>
+            <div style="margin-top: 20px" class="col-12">
+                    Or
+                </div>
+            <div style="margin-top: 20px"  class="col-12">
+                Forgot your password?
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function () {
+                    console.log('Service Worker Registered');
+                });
+        }
+
+    </script>
+    <script src="./ios-popup.js"></script>
+
+</body>
+
+</html>
