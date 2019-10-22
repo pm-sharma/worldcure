@@ -88,6 +88,18 @@
         .item {
             text-align: center;
         }
+
+        .carousel-caption {
+            position: absolute;
+            right: 5%;
+            bottom: 20px;
+            left: 5%;
+            z-index: 10;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+        }
+
     </style>
 </head>
 
@@ -101,7 +113,7 @@
 
 
 
-            <div class="container">
+            <div class="container-fluid">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -116,18 +128,18 @@
                         <div style="cursor: pointer" class="item active">
                             <a href="http://www.balticproject.org/en/calculator-page">
                                 <img src="1.jpeg" style="height: 500px;margin-left: 25px" alt="" style="width:100%;">
-                                <div class="carousel-caption">
+                                <div style="margin:0" class="carousel-caption">
                                     <!-- <h3>Join hands to cure our planet</h3> -->
-                                    <h4 style="color: black">Easily track your carbon footprint and be a part of the difference</h4>
+                                    <h4 style="color: black">Easily track your carbon footprint and be a part of the
+                                        difference</h4>
                                 </div>
                             </a>
                         </div>
 
-                        <div style="cursor: pointer" class="item">
+                        <!-- <div style="cursor: pointer" class="item">
                             <a href="https://www.wwf.org.au/#gs.b6n0jv">
                                 <img src="1.jpeg" style="height: 500px;margin-left: 25px" alt="" style="width:100%;">
                                 <div class="carousel-caption">
-                                    <!-- <h4>Easily Track2</h4> -->
                                     <h4 style="color: black">Easily track your carbon footprint & be a part of the
                                         difference.
                                     </h4>
@@ -139,11 +151,10 @@
                             <a href="https://tanumalik786.wixsite.com/mysite-1">
                                 <img src="1.jpeg" style="height: 500px;margin-left: 25px" alt="" style="width:100%;">
                                 <div class="carousel-caption">
-                                    <!-- <h3>Easily Track3</h3> -->
                                     <h3 style="color: black">Join hands to cure our planet</h3>
                                 </div>
                             </a>
-                        </div>
+                        </div> -->
 
                     </div>
 
@@ -161,11 +172,11 @@
 
 
             <div class="col-12" style="margin-top: 20px">
-                Set up banks in Worldcure
+                <h7>Set up banks in Worldcure</h7>
             </div>
             <div class="col-12" style="margin-top: 20px">
-                Worldcure works by connetcing to your bank and automatically synicing your transcations. No manual
-                work required.
+                <h8>Worldcure works by connetcing to your bank and automatically synicing your transcations. No manual
+                work required.</h8>
             </div>
 
 
@@ -202,29 +213,29 @@
 
 
     <script>
-        var slideIndex = [1, 1];
-        var slideId = ["mySlides1", "mySlides2"]
-        showSlides(1, 0);
-        showSlides(1, 1);
+        // var slideIndex = [1, 1];
+        // var slideId = ["mySlides1", "mySlides2"]
+        // showSlides(1, 0);
+        // showSlides(1, 1);
 
-        function plusSlides(n, no) {
-            showSlides(slideIndex[no] += n, no);
-        }
+        // function plusSlides(n, no) {
+        //     showSlides(slideIndex[no] += n, no);
+        // }
 
-        function showSlides(n, no) {
-            var i;
-            var x = document.getElementsByClassName(slideId[no]);
-            if (n > x.length) {
-                slideIndex[no] = 1
-            }
-            if (n < 1) {
-                slideIndex[no] = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex[no] - 1].style.display = "block";
-        }
+        // function showSlides(n, no) {
+        //     var i;
+        //     var x = document.getElementsByClassName(slideId[no]);
+        //     if (n > x.length) {
+        //         slideIndex[no] = 1
+        //     }
+        //     if (n < 1) {
+        //         slideIndex[no] = x.length
+        //     }
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].style.display = "none";
+        //     }
+        //     x[slideIndex[no] - 1].style.display = "block";
+        // }
     </script>
     <!-- <script src="./ios-popup.js"></script> -->
 
